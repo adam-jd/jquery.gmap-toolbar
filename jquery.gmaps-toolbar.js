@@ -50,14 +50,28 @@
         $toolbarIcon.click(function () {
 
             var expanded = $(this).data('expanded');
+            var position = "";
+            if (options.position == google.maps.ControlPosition.LEFT_TOP || options.position == google.maps.ControlPosition.LEFT_CENTER || options.position == google.maps.ControlPosition.LEFT_BOTTOM) 
+                {
+                    position = "left";
+                }
+                else
+                {
+                      position = "right";
+
+                }
+
+
 
             if (expanded) {
-                $(element).css('width', "0px");
+                $(element).css(position, options.width*-1);
+             
                 $(this).find("i").addClass(toolbarIconFAClass_contracted);
                 $(this).find("i").removeClass(toolbarIconFAClass_expanded);
                 $(this).data('expanded', false);
             } else {
-                $(element).css('width', options.width);
+                $(element).css(position,0);
+                $(element).find("*").show();
                 $(this).find("i").removeClass(toolbarIconFAClass_contracted);
                 $(this).find("i").addClass(toolbarIconFAClass_expanded);
 
