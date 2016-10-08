@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="jquery.gmaps-toolbar.js"></script>
+    <script src="jquery.gmap-toolbar.js"></script>
 
 
     <style>
@@ -39,7 +39,29 @@
             <button><i class="fa fa-refresh" aria-hidden="true"></i></button>
         </div>
     </div>
-    
+    <div id="toolbar" class="toolbar">
+
+        <div>
+            <button><i class="fa fa-cog"></i></button>
+        </div>
+        <div>
+            <button><i class="fa fa-map-signs"></i></button>
+        </div>
+        <div>
+            <button><i class="fa fa-street-view"></i></button>
+        </div>
+        <div>
+            <button><i class="fa fa-circle-thin" aria-hidden="true"></i></button>
+        </div>
+
+        <div>
+            <button><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        </div>
+
+        <div>
+            <button><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        </div>
+    </div>
         <script>
             $(function () {
 
@@ -49,15 +71,24 @@
                         zoom: 9,
                         mapTypeControl: false
                     });
-           
+                $("#toolbar").gmaptoolbar(
+             {
+                 map: map,
+                 position: google.maps.ControlPosition.LEFT_TOP,
+                 open: true,
+                 width: 42,
+                 height: 400
+             });
                 $("#toolbar2").gmaptoolbar(
                {
                    map: map,
                    position: google.maps.ControlPosition.RIGHT_TOP,
                    open: true,
-                   width: "42px",
-                   height: "400px"
+                   width: 42,
+                   height: 400
                });
+
+            
 
             });
 
