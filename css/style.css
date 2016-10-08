@@ -1,0 +1,70 @@
+#map {
+    width: 1000px;
+    height: 800px;
+}
+
+.toolbar button {
+    padding: 10px;
+    margin: 2px;
+    background-color: whitesmoke;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+    .toolbar button:hover {
+        background-color: wheat;
+    }
+
+    .toolbar button i {
+        font-size: 20px !important;
+        width: 15px;
+    }
+
+.toolbar {
+    padding-top: 34px;
+    width: 43px;
+    height: 280px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    -webkit-box-shadow: -4px 3px 20px -8px rgba(125,104,125,1);
+    -moz-box-shadow: -4px 3px 20px -8px rgba(125,104,125,1);
+    box-shadow: -4px 3px 20px -8px rgba(125,104,125,1);
+    margin-top: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.toolbarIcon {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    background-color: white;
+    padding: 5px;
+}
+
+    .toolbarIcon span {
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+.toolbarIconPosition_right {
+    left: -22px;
+    top: -1px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+
+
+.toolbarIconPosition_left {
+    right: -22px;
+    top: -1px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}

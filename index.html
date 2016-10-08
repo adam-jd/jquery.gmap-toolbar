@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Toolbar Example</title>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=YOURKEY"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery.gmaps-toolbar.js"></script>
+
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="toolbar2" class="toolbar">
+
+        <div>
+            <button><i class="fa fa-cog"></i></button>
+        </div>
+        <div>
+            <button><i class="fa fa-map-signs"></i></button>
+        </div>
+        <div>
+            <button><i class="fa fa-street-view"></i></button>
+        </div>
+        <div>
+            <button><i class="fa fa-circle-thin" aria-hidden="true"></i></button>
+        </div>
+
+        <div>
+            <button><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        </div>
+
+        <div>
+            <button><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    
+        <script>
+            $(function () {
+
+                var map = new google.maps.Map($("#map")[0],
+                    {
+                        center: { lat: -27.4698, lng: 153.0251 },
+                        zoom: 9,
+                        mapTypeControl: false
+                    });
+           
+                $("#toolbar2").gmaptoolbar(
+               {
+                   map: map,
+                   position: google.maps.ControlPosition.RIGHT_TOP,
+                   open: true,
+                   width: "42px",
+                   height: "400px"
+               });
+
+            });
+
+        </script>
+</body>
+</html>
